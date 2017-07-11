@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+
+        <h1>Oto kono uzytkownika o nastepujących danych:</h1>
+
+        <p th:text="'Imię: ' + ${employee.firstName}" />
+        <p th:text="'Nazwisko: ' + ${employee.lastName}" />
+        <p th:text="'Wiek: ' + ${employee.age}" />
+        <p th:text="'email: ' + ${employee.email}" />
+        <p th:text="'hasło: ' + ${employee.password}" />
+
+        <p>
+                <img th:src="@{'/employee/avatar/' + ${employee.id}}" alt="fotka" style="width:128px;height:128px;">
+
+        </p>
+
+        <form th:action="'/employee/getFile/' + ${employee.id}" th:method="GET">
+                <input type="submit" value="Get avatar"/><br>
+        </form>
+        <form th:action="'/employee/editing/' + ${employee.id}" th:method="GET">
+                <input type="submit" value="Edit account"/><br>
+        </form>
+        <form th:action="'/employee/deleting/' + ${employee.id}" th:method="DELETE">
+                <input type="submit" value="Delete account"/><br>
+        </form>
+        <form action="/">
+                <input type="submit" value="Main page"/><br>
+        </form>
+
+
+</body>
+</html>
+

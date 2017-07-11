@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodawanie użytkownika do bazy danych. Wypełnij poniższy formularz</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/Employee}" th:object="${employee}" th:method="post"  enctype="multipart/form-data">
+
+    <p>Imię: <input type="text" th:field="*{firstName}" placeholder="wpisz swoje imię" required=/></p>
+
+    <p>Nazwisko: <input type="text" th:field="*{lastName}" required placeholder="Wpisz swoje nazwisko" required/></p>
+
+    <p>email: <input type="text" th:field="*{email}" required placeholder="Wpisz swój adres e-mail" required="required"/></p>
+
+    <p>hasło: <input type="text" th:field="*{password}" required placeholder="Wpisz hasło" required="required"/></p>
+
+    <p>Wiek: <input type="number" th:field="*{age}"/></p>
+
+    <p>Avatar: <input type="file" name="file" /></p>
+
+    <p><input type="submit" value="Submit" /> </p>
+</form>
+</body>
+</html>

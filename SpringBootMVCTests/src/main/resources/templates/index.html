@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+
+<!--<span th:text="'Message: '"></span>-->
+<div class="container">
+    <div class="hero-unit">
+        <h1>Witaj na mojej pierwszej stronie</h1>
+        <p>
+            kliknij w poniższy link który przekieruje cie do formularza który umozliwiwa tworzenie obiektu klasy User
+            w bazie danych
+        </p>
+        <p>
+        <form action="/Employee" th:method="GET">
+        <input type="submit" value="New employee"/><br>
+        </form>
+        <form action="/login" th:method="GET">
+            <input type="submit" value="Log in"/><br>
+        </form>
+        </p>
+    </div>
+    <div>&copy; 2016 The Static Templates</div>
+</div>
+</body>
+</html>
+

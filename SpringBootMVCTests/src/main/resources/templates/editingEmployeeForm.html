@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodawanie użytkownika do bazy danych. Wypełnij poniższy formularz</title>
+</head>
+<body>
+<form action="#" th:action="'/employee/editing/' + ${employee.id}" th:object="${employee}" th:method="PUT" enctype="multipart/form-data">
+    <p>Imię: <input type="text" th:field="*{firstName}" /></p>
+    <p>Nazwisko: <input type="text" th:field="*{lastName}" /></p>
+    <p>hasło: <input type="text" th:field="*{password}" /></p>
+    <p>Wiek: <input type="number" th:field="*{age}" /></p>
+    <p>Aktualizuj avatar: <input type="file" name="file" /></p>
+
+
+    <p><input type="submit" value="Submit" /> </p>
+
+</form>
+
+<form th:action="'/employee/deletingAvatar/' + ${employee.id}" th:method="DELETE">
+    <input type="submit" value="Delete vatar"/><br>
+</form>
+
+</body>
+</html>

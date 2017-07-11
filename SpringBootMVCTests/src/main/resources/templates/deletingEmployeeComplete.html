@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+
+        <h1>Usunięto z bazy danych obiekt Employee o nastepujących parametrach:</h1>
+
+        <p th:text="'Imię: ' + ${employee.firstName}" />
+        <p th:text="'Nazwisko: ' + ${employee.lastName}" />
+        <p th:text="'Wiek: ' + ${employee.age}" />
+        <p th:text="'email: ' + ${employee.email}" />
+        <p th:text="'hasło: ' + ${employee.password}" />
+
+        <a href="//getForm">Submit another message</a>
+        <p>
+                Go to main page
+        </p>
+        <form action="/">
+                <input type="submit" value="Main page"/><br>
+        </form>
+
+
+</body>
+</html>
+

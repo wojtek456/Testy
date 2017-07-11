@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Wprowadż email i haslo</title>
+</head>
+<body>
+<form action="/dashboard" th:method="post">
+    email: <input type="text" name="email"><br>
+    hasło: <input type="text" name="password"><br>
+    <input type="submit" value="Log in"/>
+</form>
+</body>
+</html>
